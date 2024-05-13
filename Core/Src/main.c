@@ -90,7 +90,9 @@ void RTC_display()				//RTCʱ¼䏔ʾº¯�?
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	OLED_ShowStr(81,0,"OctoFan!",1);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+  __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 128);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -117,6 +119,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	OLED_Init();
 	OLED_CLS();
+	
 	HAL_Delay(1000);   
   /* USER CODE END 2 */
 
@@ -128,10 +131,11 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 				
-		RTC_display();		//RTCʱ¼䏔ʾº¯�?
+		//RTC_display();
+		OLED_ShowStr(81,0,"OctoFan!",1);
 		DHT11();
 		//OLED_DrawGIF(75,2,127,8,36,370,BMP2);			//̫¿Ոˡª¡ªϔʾ¶¯̬ͼƬ(±ʕߍµÀÁÁˣ¬ȡģʵԚ̫·³Áˣ¬ȧ¹û֮λӐźÁ¿ȡģµĈ󟧫α±ظ�?)	
-		OLED_DrawGIF(77,2,129,8,24,370,BMP3);
+		OLED_DrawGIF(75,1,127,7,2,370,BMP3);
 		//OLED_DrawBMP(76,2,128,7,BMP4);
   }
   /* USER CODE END 3 */

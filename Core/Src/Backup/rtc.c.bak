@@ -57,7 +57,7 @@ void MX_RTC_Init(void)
 
   /** Initialize RTC and set the Time and Date
   */
-  sTime.Hours = 0x22;
+  sTime.Hours = 0x23;
   sTime.Minutes = 0x38;
   sTime.Seconds = 0x0;
 
@@ -67,8 +67,8 @@ void MX_RTC_Init(void)
   }
   DateToUpdate.WeekDay = RTC_WEEKDAY_MONDAY;
   DateToUpdate.Month = RTC_MONTH_APRIL;
-  DateToUpdate.Date = 0x3;
-  DateToUpdate.Year = 0x22;
+  DateToUpdate.Date = 0x4;
+  DateToUpdate.Year = 0x23;
 
   if (HAL_RTC_SetDate(&hrtc, &DateToUpdate, RTC_FORMAT_BCD) != HAL_OK)
   {
