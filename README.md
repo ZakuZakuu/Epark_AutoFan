@@ -1,9 +1,7 @@
 ## 本仓库为一个校园竞赛项目！！
 #### Epark训练营 —— stm32温湿度风扇(OctoFan!)
-渲染图：
-![渲染图](Imgs/render.jpg)
-章鱼logo：
-![渲染图](Imgs/Logo.jpg)
+渲染图：![渲染图](Imgs/render.jpg)
+章鱼logo：![渲染图](Imgs/Logo.jpg)
 
 ## 项目结构
 包含：
